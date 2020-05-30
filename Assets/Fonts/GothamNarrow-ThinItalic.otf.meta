@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 9e4c5ce6548615e43b66521308283eda
+timeCreated: 1588667352
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gotham Narrow
+  fontNames:
+  - Gotham Narrow
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8aaa7e8129a9ca8478a3174b19861053, type: 3}
+  - {fileID: 12800000, guid: 2e1544d285375f84ea9df5218907e7f4, type: 3}
+  - {fileID: 12800000, guid: 8013f3b4e86218e4985336beb1c354c4, type: 3}
+  - {fileID: 12800000, guid: 1be32915511dae64f9cae9c1e38592ee, type: 3}
+  - {fileID: 12800000, guid: 96513236014d01c41a3c4ad041496d80, type: 3}
+  - {fileID: 12800000, guid: 1f2dcf09cd5d85841b70b127b34dd915, type: 3}
+  - {fileID: 12800000, guid: 18c0c89af6d81f4449bf013494550093, type: 3}
+  - {fileID: 12800000, guid: 085d91eb5cdfb1c46af0029a8885614d, type: 3}
+  - {fileID: 12800000, guid: 6a5b427c6901e7a489ab16ddade5e1f3, type: 3}
+  - {fileID: 12800000, guid: 19524f9df87649d4280b8fb8edfbc77a, type: 3}
+  - {fileID: 12800000, guid: 633c485f2febb3b4a84fef5687e8ac73, type: 3}
+  - {fileID: 12800000, guid: 4d53d1cf35a0a184da88652d341072a0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 27b117c1523383b4b9d6a1aff466e0ef
+timeCreated: 1588667350
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gotham Condensed
+  fontNames:
+  - Gotham Condensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 24a348e1eef1b3649a462d8ffc7d6b69, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: b99d4519cabc450439c7fe1844e355c8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: DOFA_1200_M_000
+    100004: DOFA_1200_O_000
+    100006: DOFA_1200_P_00
+    100008: DOFA_900_M_000
+    100010: DOFA_900_O_000
+    100012: DOFA_900_P_00
+    100014: Tros_00
+    100016: Tros_01
+    100018: Tros_02
+    100020: Tros_03
+    100022: Tros_04
+    100024: Tros_05
+    100026: Tros_06
+    100028: Tros_07
+    100030: Wire_002
+    100032: Wire_003
+    100034: Zanga_00
+    100036: Zanga_01
+    100038: Zanga_02
+    100040: Zanga_03
+    100042: Zanga_04
+    100044: Zanga_05
+    100046: Zanga_06
+    100048: Zanga_07
+    400000: //RootNode
+    400002: DOFA_1200_M_000
+    400004: DOFA_1200_O_000
+    400006: DOFA_1200_P_00
+    400008: DOFA_900_M_000
+    400010: DOFA_900_O_000
+    400012: DOFA_900_P_00
+    400014: Tros_00
+    400016: Tros_01
+    400018: Tros_02
+    400020: Tros_03
+    400022: Tros_04
+    400024: Tros_05
+    400026: Tros_06
+    400028: Tros_07
+    400030: Wire_002
+    400032: Wire_003
+    400034: Zanga_00
+    400036: Zanga_01
+    400038: Zanga_02
+    400040: Zanga_03
+    400042: Zanga_04
+    400044: Zanga_05
+    400046: Zanga_06
+    400048: Zanga_07
+    2100000: CRN.Tros_met
+    2100002: CRN.Zanga_met
+    2100004: Wire_plastic_wh
+    2100006: Aluminium Composite Black
+    2100008: METAL_Alum
+    2100010: Plafon
+    2100012: 'Material #41'
+    2100014: Aluminium Composite White
+    2300000: DOFA_1200_M_000
+    2300002: DOFA_1200_O_000
+    2300004: DOFA_900_M_000
+    2300006: DOFA_900_O_000
+    2300008: Tros_00
+    2300010: Tros_01
+    2300012: Tros_02
+    2300014: Tros_03
+    2300016: Tros_04
+    2300018: Tros_05
+    2300020: Tros_06
+    2300022: Tros_07
+    2300024: Wire_002
+    2300026: Wire_003
+    2300028: Zanga_00
+    2300030: Zanga_01
+    2300032: Zanga_02
+    2300034: Zanga_03
+    2300036: Zanga_04
+    2300038: Zanga_05
+    2300040: Zanga_06
+    2300042: Zanga_07
+    3300000: DOFA_1200_M_000
+    3300002: DOFA_1200_O_000
+    3300004: DOFA_900_M_000
+    3300006: DOFA_900_O_000
+    3300008: Tros_00
+    3300010: Tros_01
+    3300012: Tros_02
+    3300014: Tros_03
+    3300016: Tros_04
+    3300018: Tros_05
+    3300020: Tros_06
+    3300022: Tros_07
+    3300024: Wire_002
+    3300026: Wire_003
+    3300028: Zanga_00
+    3300030: Zanga_01
+    3300032: Zanga_02
+    3300034: Zanga_03
+    3300036: Zanga_04
+    3300038: Zanga_05
+    3300040: Zanga_06
+    3300042: Zanga_07
+    4300000: Tros_03
+    4300002: Zanga_04
+    4300004: Wire_003
+    4300006: DOFA_900_O_000
+    4300008: DOFA_1200_O_000
+    4300010: DOFA_900_M_000
+    4300012: DOFA_1200_M_000
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
