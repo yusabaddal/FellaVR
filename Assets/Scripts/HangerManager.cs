@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HangerManager : MonoBehaviour {
     public List<HangerVariantManager> HangerList;
+    public int location;
 	// Use this for initialization
 	void Start () {
 		

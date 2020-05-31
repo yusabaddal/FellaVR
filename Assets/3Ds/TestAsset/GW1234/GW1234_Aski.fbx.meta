@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: e6065739e0ca0e94b90717d72b2b2f39
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 1__KUMA__1_Inner_53_1
+    100002: //RootNode
+    100004: GW_CEKET_Colorway_1
+    100006: Mat_1_1
+    100008: VS_Hanger___Straight
+    400000: 1__KUMA__1_Inner_53_1
+    400002: //RootNode
+    400004: GW_CEKET_Colorway_1
+    400006: Mat_1_1
+    400008: VS_Hanger___Straight
+    2100000: Mat_0_0
+    2100002: Mat_1_1
+    2100004: 1__KUMA_ 1_Inner_2_5
+    2100006: 1__Wool_Inner_4_19
+    2100008: 1_Top_Untitled-2 1_6_10
+    2100010: 1_Top_SingleNeedle_3mmEdge_Inner_7_15
+    2300000: 1__KUMA__1_Inner_53_1
+    2300002: Mat_1_1
+    3300000: 1__KUMA__1_Inner_53_1
+    3300002: Mat_1_1
+    4300000: Mat_1_1
+    4300002: 1__KUMA__1_Inner_53_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "kuma\u015E 1"
+    second: {fileID: 2800000, guid: b5564f5bfb53f114f98846fc47e7add7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: singleneedle
+    second: {fileID: 2800000, guid: 4cfd7f274b2d2594ca8347f6f43e4895, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tex07510d51
+    second: {fileID: 2800000, guid: da8424881c887dd40aca5bc545d9ae26, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: untitled-2
+    second: {fileID: 2800000, guid: 9013ea56acb799d40bae2b09f8c20b07, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood1
+    second: {fileID: 2800000, guid: 3b975cfdf0be65c45914ea93f96eb9ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wool
+    second: {fileID: 2800000, guid: 9d61f6ee11404a744a865c8b939f700f, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 500
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

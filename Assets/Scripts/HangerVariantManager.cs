@@ -23,8 +23,7 @@ public class HangerVariantManager : MonoBehaviour {
     
     int currentSelected;
     int currentColor;
-    public GameObject UICanvas;
-    
+    public HangerUIManager uımanager;
 
     [Header("-------------------------------***************-------------------------------")]
 
@@ -40,13 +39,20 @@ public class HangerVariantManager : MonoBehaviour {
     {
         currentSelected = selected;
         closeAllObjects();
-        ListModel[currentColor].variantList[selected].productModel.SetActive(true);
+        if (ListModel[currentColor].variantList != null && ListModel[currentColor].variantList.Count!=0)
+        {
+            if (ListModel[currentColor].variantList[selected].productModel != null)
+            {
+                ListModel[currentColor].variantList[selected].productModel.SetActive(true);
+            }
+        }
     }
 
     void closeAllObjects()
     {
         foreach (var obj in ListModel[currentColor].variantList)
         {
+            if(obj.productModel!=null)
             obj.productModel.SetActive(false);
         }
     }
@@ -62,8 +68,8 @@ public class HangerVariantManager : MonoBehaviour {
 
     public void setUIActive(bool state)
     {
-        if (UICanvas != null)
-            UICanvas.SetActive(state);
+        if (uımanager != null)
+            uımanager.gameObject.SetActive(state);
     }
 
     public void fillVariant()
@@ -76,18 +82,45 @@ public class HangerVariantManager : MonoBehaviour {
                 var modelVariant = this.ListModel[i].variantList[j];
                 //modelVariant.productModel = Instantiate(modelVariant.productModel, this.transform);
                 //Debug.Log(transform.parent.gameObject.name);
-                var findObj = GameObject.Find(modelVariant.productCode);
-                if (findObj != null)
+                //var findObj = GameObject.Find(modelVariant.productCode+"_Aski");
+                for(int a = 0; a < GameManager.instance.assetsContent.childCount; a++)
                 {
-                    var obj = Instantiate(findObj, this.transform);
-                    obj.transform.localPosition = new Vector3(0, 0, 0);
-                    //obj.name = modelVariant.productCode;
-                    modelVariant.productModel = obj;
-                    Debug.Log(modelVariant.productCode);
+                    if (GameManager.instance.assetsContent.GetChild(a).gameObject.name.ToString() == modelVariant.productCode + "_Aski")
+                    {
+                        uımanager.buttonNames.Add(modelVariant.productCode);
+                        GameObject obj = Instantiate(GameManager.instance.assetsContent.GetChild(a).gameObject, this.transform);
+                        obj.transform.localPosition = new Vector3(0, 0, 0);
+                        //obj.name = modelVariant.productCode;
+                        var selfVariant = obj.transform.GetComponent<VariantManager>();
+                        if (selfVariant == null)
+                        {
+                            selfVariant = obj.AddComponent<VariantManager>();
+                        }
+                        selfVariant.selfVariant = new HangerVariant {
+                            productCode=modelVariant.productCode,
+                            productName=modelVariant.productName,
+                            productModel=obj                            
+                        };
+                        var col =obj.AddComponent<BoxCollider>();
+                        col.isTrigger = true;
+                        col.center = new Vector3(0, 5, 0);
+                       //modelVariant.productModel = obj;
+                        Debug.Log(modelVariant.productCode);
+                        modelVariant.productModel = obj;
+                        if (a > 0)
+                        {
+                            obj.SetActive(false);
+                        }
+                    }
                 }
+                //if (findObj != null)
+                //{
+                    
+                //}
             }
         }
         showSelectedModel(0);
+        uımanager.setUI();
     }
 
 }

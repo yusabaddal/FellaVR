@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PostLogin : Post
 {
-    public string Email;
-    public string Password;
+    public string email;
+    public string password;
+    public string mac;
 
 }

@@ -50,7 +50,7 @@ public class GestureTeleport : MonoBehaviour
                     teleportingTo = hit.collider.transform;
                     teleporting = true;
                 }
-                Debug.Log(hit.collider.gameObject.name);
+                //Debug.Log(hit.collider.gameObject.name);
             }
             if (hits.Length == 0)
                 teleporting = false;
@@ -111,7 +111,12 @@ public class GestureTeleport : MonoBehaviour
 
     void teleport()
     {
-        player.transform.position = new Vector3(teleportingTo.position.x, player.transform.position.y, teleportingTo.position.z);
+        //var child = teleportingTo.GetChild(0);
+
+        //player.transform.position = new Vector3(teleportingTo.position.x, player.transform.position.x, teleportingTo.position.z);
+        player.transform.SetParent(teleportingTo);
+        player.transform.localPosition = Vector3.zero;
+        teleportingTo.DetachChildren();
         resetTeleporting();
     }
     void resetTeleporting()

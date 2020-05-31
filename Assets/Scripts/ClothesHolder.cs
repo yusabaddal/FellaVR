@@ -16,14 +16,31 @@ public class ClothesHolder : MonoBehaviour {
 	}
     public void findClotes(string clothName)
     {
-        for(int i=0;i<ModelClothesList.Count;i++)
+        closeOthers();
+        for (int i=0;i<ModelClothesList.Count;i++)
         {
             var item = ModelClothesList[i];
             if (clothName == item.productCode)
             {
                 showEquipedClothes(i);
+                return;
             }
         }
+
+        for (int a = 0; a < GameManager.instance.assetsContent.childCount; a++)
+        {
+            if (GameManager.instance.assetsContent.GetChild(a).gameObject.name.ToString() == clothName + "_Avatar")
+            {
+                var avatarObj = Instantiate(GameManager.instance.assetsContent.GetChild(a).gameObject,transform);
+                avatarObj.transform.localPosition = new Vector3(0, 0, 0);
+                ModelClothesList.Add(new AvatarModel {
+                    productCode=clothName,
+                    productModel= avatarObj
+                });
+            }
+
+        }
+
     }
     public void showEquipedClothes(int selected)
     {
@@ -37,4 +54,6 @@ public class ClothesHolder : MonoBehaviour {
             item.productModel.SetActive(false);
         }
     }
+
+   
 }

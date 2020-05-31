@@ -13,11 +13,11 @@ public class LoginModel : MonoBehaviour
     {
         PostLogin login = new PostLogin();
 
-        login.Email = id.text;
-        login.Password = sifre.text;
+        login.email = id.text;
+        login.password = sifre.text;
+        
 
-
-        StartCoroutine(post(login));
+        //StartCoroutine(post(login));
 
     }
 
@@ -26,37 +26,37 @@ public class LoginModel : MonoBehaviour
         Application.LoadLevel(Application.loadedLevel + 1);
     }
 
-    public IEnumerator post(PostLogin login)
-    {
+    //public IEnumerator post(PostLogin login)
+    //{
 
-        Debug.Log(JsonUtility.ToJson(login));
+    //    Debug.Log(JsonUtility.ToJson(login));
 
-        PostCtrl post = new PostCtrl();
-        //error.text = "Giriş Yapılıyor";
-        error.text = "Giriş Yapılıyor";
+    //    PostCtrl post = new PostCtrl();
+    //    //error.text = "Giriş Yapılıyor";
+    //    error.text = "Giriş Yapılıyor";
 
-        yield return StartCoroutine(post.gettData(EndPoint.login, ("id=" + login.Email + "&ps=" + login.Password)));
+    //    yield return StartCoroutine(post.gettData(EndPoint.login, ("id=" + login.Email + "&ps=" + login.Password)));
 
-        if (post.resultObj.responseCode != 200)  //on server fail
-        {
-            //error.text = post.resultObj.error;
-            error.text = "Hata";
+    //    if (post.resultObj.responseCode != 200)  //on server fail
+    //    {
+    //        //error.text = post.resultObj.error;
+    //        error.text = "Hata";
 
-        }
-        else //on server success
-        {
-            string resultStr = post.resultObj.downloadHandler.text;
-            if (resultStr != "0")
-            {
-                gonext();
+    //    }
+    //    else //on server success
+    //    {
+    //        string resultStr = post.resultObj.downloadHandler.text;
+    //        if (resultStr != "0")
+    //        {
+    //            gonext();
 
-            }
-            else
-            {
-                error.text = "Hata";
-            }
-        }
+    //        }
+    //        else
+    //        {
+    //            error.text = "Hata";
+    //        }
+    //    }
 
 
-    }
+    //}
 }

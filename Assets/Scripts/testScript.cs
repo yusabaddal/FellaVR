@@ -41,6 +41,7 @@ public class testScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("girdi");
         var otherCloth = other.transform.GetComponent<ClothesHolder>();
         if (otherCloth != null)
         {

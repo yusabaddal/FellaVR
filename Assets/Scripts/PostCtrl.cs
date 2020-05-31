@@ -12,10 +12,10 @@ public enum EndPoint
 
 public class PostCtrl
 {
-    string server = "http://fellavr.ugurcanalyuz.com";
+    string server = "https://www.fellavr.com";
 
-    string LoginEndpoint = "/API/ua.php?";
-    string GetSceneEndpoint = "/APIs/api_products.php?id=";
+    string LoginEndpoint = "/uax_vr_users_login";
+    string GetSceneEndpoint = "/uax_vr_varyants_DownloadGame/";
 
 
     public UnityWebRequest resultObj;

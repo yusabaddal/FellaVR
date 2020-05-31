@@ -19,7 +19,7 @@ public class AssetDownloader : MonoBehaviour {
 	}
     void getScene()
     {
-        StartCoroutine(_getscene("1"));
+        StartCoroutine(_getscene("20"));
     }
     IEnumerator _LoadBundle()
     {
