@@ -26,23 +26,23 @@ public class LauncherManager : MonoBehaviour {
 
         if (loadingGame)
         {
-            //current += loadingSpeed;
-            //loadingImage.fillAmount = current;
-            //loadingtext.text = "%" +(int)(current*100);
-            //if (current > 1)
-            //{
-            //    loadingGame = false;
-            //    OpenPage(5);
-
-            //}
-            loadingImage.fillAmount = async.progress;
-            loadingtext.text = "%" +(int)async.progress*100;
-            if (async.isDone)
+            current += loadingSpeed;
+            loadingImage.fillAmount = current;
+            loadingtext.text = "%" + (int)(current * 100);
+            if (current > 1)
             {
                 loadingGame = false;
                 OpenPage(5);
+
             }
-            
+            //loadingImage.fillAmount = async.progress;
+            //loadingtext.text = "%" +(int)async.progress*100;
+            //if (async.isDone)
+            //{
+            //    loadingGame = false;
+            //    OpenPage(5);
+            //}
+
         }
 
 	}
@@ -56,7 +56,7 @@ public class LauncherManager : MonoBehaviour {
     public void startDownload()
     {
         loadingGame = true;
-        StartCoroutine(load(1));
+        //StartCoroutine(load(1));
     }
 
     IEnumerator load(int levelName)
@@ -92,8 +92,8 @@ public class LauncherManager : MonoBehaviour {
 
     public void OpenScene(int scene)
     {
-        //Application.LoadLevel(scene);
-        async.allowSceneActivation = true;
+        Application.LoadLevel(scene);
+        //async.allowSceneActivation = true;
 
     }
 
@@ -107,7 +107,7 @@ public class LauncherManager : MonoBehaviour {
 
             login.email = mailInput.text;
             login.password = pwInput.text;
-            login.mac = GetMacAddress();
+            login.mac = "1234";
 
             StartCoroutine(post(login));
         }
@@ -148,20 +148,20 @@ public class LauncherManager : MonoBehaviour {
 }
 
 
-    string GetMacAddress()
-    {
-        var macAdress = "";
-        NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
-        var i = 0;
-        foreach (var adapter  in nics)
-        {
-            PhysicalAddress address = adapter.GetPhysicalAddress();
-            if (address.ToString() != "")
-            {
-                macAdress = address.ToString();
-                return macAdress;
-            }
-        }
-        return "";
-    }
+    //string GetMacAddress()
+    //{
+    //    var macAdress = "";
+    //    NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+    //    var i = 0;
+    //    foreach (var adapter  in nics)
+    //    {
+    //        PhysicalAddress address = adapter.GetPhysicalAddress();
+    //        if (address.ToString() != "")
+    //        {
+    //            macAdress = address.ToString();
+    //            return macAdress;
+    //        }
+    //    }
+    //    return "";
+    //}
 }
