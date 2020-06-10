@@ -1,0 +1,704 @@
+fileFormatVersion: 2
+guid: 0bcfdbfb75b323b4284dd2064ffb2f6b
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 04
+    second: {fileID: 2800000, guid: 0c587445b21c3404caf2b68f4e21664d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 10
+    second: {fileID: 2800000, guid: 1468996df63a53546a4b3ee4a8b5a180, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ButtomEyeLid
+    second: {fileID: 2800000, guid: d4d4dcf55d8105b43a3b4266cab1c5a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hair01_C
+    second: {fileID: 2800000, guid: 3f629429ff058614e9bc20bf6f011d3d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hair01_C_1
+    second: {fileID: 2800000, guid: ebc34f1943f6af44daa5b6eb484d20e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hair01_G
+    second: {fileID: 2800000, guid: a2104e04260b0b8429c1e67f407cb8b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TopEyeLid2
+    second: {fileID: 2800000, guid: 7ef09e6c90e931f4393bcd42b3c3a569, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Gums
+    second: {fileID: 2800000, guid: 545c67a7f3fabd0469120516e1dbc626, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-InnerMouth
+    second: {fileID: 2800000, guid: 84515ec5e171fdb4ba3a1f2e551b622d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Arm
+    second: {fileID: 2800000, guid: ad81b684ca41e364d940d0ca9e14c2df, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Buttocks
+    second: {fileID: 2800000, guid: 5006b7d62f133e94293beccefaf14630, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Cheek
+    second: {fileID: 2800000, guid: 608eda920ffaf6442afc3dfa80435b30, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Chin
+    second: {fileID: 2800000, guid: 7b8810a428ac40e46aa8f252964db764, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Ear
+    second: {fileID: 2800000, guid: 8924438134f132a4db212495943082fb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Eye
+    second: {fileID: 2800000, guid: f704ca6c3f121a340acbfcfe4f956bdc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_EyeBrow
+    second: {fileID: 2800000, guid: 009bbdeb634b68d489cf83a5e0f33cae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Eye_Ball2
+    second: {fileID: 2800000, guid: 76296f79a7a012d469b0989dd4480aff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_FingerNail1
+    second: {fileID: 2800000, guid: 7fa21ce22ceb16b4fa69125449bc0c7e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_FingerNail2
+    second: {fileID: 2800000, guid: cbede50baf0249649ba38901d2794b31, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_FingerNail3
+    second: {fileID: 2800000, guid: acf848ca742fbab4fa92113b9cc3224f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_FingerNail4
+    second: {fileID: 2800000, guid: c7e28618e646ad14a839f7ba985e4471, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_FingerNail5
+    second: {fileID: 2800000, guid: a5644aec1b219aa429fd0a3581edec4d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_ForHead
+    second: {fileID: 2800000, guid: 89369047603dc7a41a2b314dec218ac2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand1
+    second: {fileID: 2800000, guid: 43a67ae6e959ad94f9a3c9891b5f9348, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand10
+    second: {fileID: 2800000, guid: 318214a72ecc4954983d61b36db7113b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand11
+    second: {fileID: 2800000, guid: 0ca82a40dbc744c4b9ffdb119e47454c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand12
+    second: {fileID: 2800000, guid: 449c2f2d069dd804eb3ecbeef858dff2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand13
+    second: {fileID: 2800000, guid: 81791f4300563f04f859799d6b37236b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand14
+    second: {fileID: 2800000, guid: 392db806c103a9a4fb4f7ff643e559f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand15
+    second: {fileID: 2800000, guid: a90b8fb6fb84f3c4f8509af370603d66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand16
+    second: {fileID: 2800000, guid: 032b8ced4396f6e4ab815076f4b303f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand17
+    second: {fileID: 2800000, guid: e8d8466b0f24eb14084c749ca80832a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand18
+    second: {fileID: 2800000, guid: 6fbf9d27621476141afa314253b077f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand19
+    second: {fileID: 2800000, guid: 406625064175fe949b3ec1aa125ef899, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand2
+    second: {fileID: 2800000, guid: c3ab11b013681514ca555e3d8d9c5a41, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand20
+    second: {fileID: 2800000, guid: c03217d6f24d03248a9592c50c06d63f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand21
+    second: {fileID: 2800000, guid: ed384859db846f94ba9ae9f5f7112c1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand22
+    second: {fileID: 2800000, guid: 440fe7f79c006e14889c406c4cf5fa00, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand23
+    second: {fileID: 2800000, guid: dcbd9b69eef17464295c2224768a67f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand24
+    second: {fileID: 2800000, guid: d9b9f0989bc16ab48a162020dc0c55d2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand25
+    second: {fileID: 2800000, guid: ee04567eb7093eb4480bbed7ec0b5f33, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand3
+    second: {fileID: 2800000, guid: fb788efd3d3f8c64086e763ff5353d7e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand4
+    second: {fileID: 2800000, guid: 474ffde30fbe8c44aac68dfa870aa784, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand5
+    second: {fileID: 2800000, guid: 1f7c31f23360b1d49b3b5acd8f8511e0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand6
+    second: {fileID: 2800000, guid: 6fde61fa0b346d140bbffb81a5148b42, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand7
+    second: {fileID: 2800000, guid: a3dba8b726ad1e74e8a4bfccda47d1a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand8
+    second: {fileID: 2800000, guid: 4ea8a70b03423974c89001ce228104c0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hand9
+    second: {fileID: 2800000, guid: d1c4ad7f1a0ae5b4bbfe724ab865090b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Hip
+    second: {fileID: 2800000, guid: 5d7c6c538617ed54690f7cf6e14f4e8e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Jaw
+    second: {fileID: 2800000, guid: 20a32f4092c6dd14abfe691b3e61ef6d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Leg1
+    second: {fileID: 2800000, guid: f6f4ba3f18b4fe74cb9dbd93517f2342, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Leg2
+    second: {fileID: 2800000, guid: 32abde8e483c63449af62b4b443f30f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Leg3
+    second: {fileID: 2800000, guid: 531eba0269ec27848b11f2813471d564, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Mouth
+    second: {fileID: 2800000, guid: da06ed50174feb94a9e95badf99c474e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Neck1
+    second: {fileID: 2800000, guid: 0c69f6f7a34b45942a5fb2371e40b10c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Neck2
+    second: {fileID: 2800000, guid: 13de2e1a154e6f047a140da063a6be55, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Neck3
+    second: {fileID: 2800000, guid: 15c6da83788ad9a4ca15a7dffdb334f5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_NeckTop1
+    second: {fileID: 2800000, guid: 7130ecdb190880a43a89c098789dea6d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_NeckTop2
+    second: {fileID: 2800000, guid: 696b2e3b60bedd54b9b8c7ab6b08220e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Nose
+    second: {fileID: 2800000, guid: 3d4a33d98aece934597817a8b46925bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_NoseTop
+    second: {fileID: 2800000, guid: 64e8c5e1d9607fb488a0c8975c823779, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Punani
+    second: {fileID: 2800000, guid: 43f83cb5d9bf59b459c31f66e3c8971f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Skull
+    second: {fileID: 2800000, guid: 36b9efda982a81640a11203b7800aa19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Torso1
+    second: {fileID: 2800000, guid: 9cf940f9298a1a04dac23334c87b8e78, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Torso2
+    second: {fileID: 2800000, guid: cb45fbf6fa5ab5f4f9173e3e300b5db7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Torso3
+    second: {fileID: 2800000, guid: 77995a51f1a17824b941a1df82a8d1ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Torso4
+    second: {fileID: 2800000, guid: 42d2f95086ed0b7468016e7de297716a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Torso5
+    second: {fileID: 2800000, guid: dc59d18d6c49f7943b8d2c418b3d4090, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow1
+    second: {fileID: 2800000, guid: 281571ab649363d4d88f4288fa578d08, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow10
+    second: {fileID: 2800000, guid: 0d849cbae855e7847a4a48f2435c2db6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow11
+    second: {fileID: 2800000, guid: 2911ca52ec1eb16449f1796f6bd0be76, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow12
+    second: {fileID: 2800000, guid: 27c47f26cf2cf774091f001c96674f4b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow13
+    second: {fileID: 2800000, guid: 63d6747d00645fd4e8e9e7b097878527, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow14
+    second: {fileID: 2800000, guid: 07b43755772c1164b8fdf429ff4ce4a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow15
+    second: {fileID: 2800000, guid: eb809486181378540b6b44135bee7d19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow16
+    second: {fileID: 2800000, guid: 70f386675149cd04db8b892140c47adc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow17
+    second: {fileID: 2800000, guid: 8af521f87b7bd064daa9b57b90e6ad28, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow18
+    second: {fileID: 2800000, guid: 1f8a42071fce2b3408d8f2f37b38fccf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow2
+    second: {fileID: 2800000, guid: 176c8b46fff9bf74bbfcf3e072883689, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow3
+    second: {fileID: 2800000, guid: 004be7d0ad9b7314ba936d061a1a58a2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow4
+    second: {fileID: 2800000, guid: 5f9ed27d8c6057a4c9a30422d0456b6a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow5
+    second: {fileID: 2800000, guid: 9944eca84ed54b14ea9833050396a852, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow6
+    second: {fileID: 2800000, guid: 93bdee5a36375b846b9f767154ab0dfd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow7
+    second: {fileID: 2800000, guid: 288cfb7fa63c2004183aa5c9390e1f3d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow8
+    second: {fileID: 2800000, guid: 66b89a2eddd107f4389ecded33eec664, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Tow9
+    second: {fileID: 2800000, guid: 744770977e00a19489db193ee48cc2a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_TowNail1
+    second: {fileID: 2800000, guid: 1e8a33cd2adf2f3418c7e96314ac1241, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_TowNail2
+    second: {fileID: 2800000, guid: 7f8b671879ec59a40bf4926092ad3b78, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_TowNail3
+    second: {fileID: 2800000, guid: 2f012447f5aa32a4ca8f12262dca5d33, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_TowNail4
+    second: {fileID: 2800000, guid: 1b1512452a8ce8a4e8470b9f6c82f4ce, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_TowNail5
+    second: {fileID: 2800000, guid: 7b727aaeb79edb74da8ea6f339e276ac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Left_Waist
+    second: {fileID: 2800000, guid: 456787cef3dff0a40b994edd64859728, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Buttocks
+    second: {fileID: 2800000, guid: c676513a9dac4ea43ab4477bd34a3c44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Cheek
+    second: {fileID: 2800000, guid: 89570854ebd1ef64f8e9785e3fccadac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Chin
+    second: {fileID: 2800000, guid: 2f0744613e7375640897d8c132c6757a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Eye
+    second: {fileID: 2800000, guid: 4ec379baaa4d14342adddb1a715e18e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_EyeBrow
+    second: {fileID: 2800000, guid: 67b3203103f384e428fd9f97124e2e0a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Eye_Ball2
+    second: {fileID: 2800000, guid: c9cf3c28da1f7324892ba91235b14ea5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_ForHead
+    second: {fileID: 2800000, guid: fde2f5e2e3593c641aef5202fee324c1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Hip
+    second: {fileID: 2800000, guid: 418851f0978fac145a1407a079b45cf7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Jaw
+    second: {fileID: 2800000, guid: 09780199d1933a94a9eb1f1ac844ddfc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Mouth
+    second: {fileID: 2800000, guid: 62b54ea8af52fb0458a94ea133675f46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Neck1
+    second: {fileID: 2800000, guid: 7a89ebdc5655e9847a76866698726747, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Neck2
+    second: {fileID: 2800000, guid: 26b737da35857374ba478331b8f8ad59, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Neck3
+    second: {fileID: 2800000, guid: 4ea68b2a5a8ec6647aa2526f6db2921c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_NeckTop1
+    second: {fileID: 2800000, guid: 01d176cb79cbe3749a20c8b03f252e44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_NeckTop2
+    second: {fileID: 2800000, guid: ba1f4667a85e0794d9f7ac69f624f562, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Nose
+    second: {fileID: 2800000, guid: 4902aed4f13bd174584216e6a9bc1afa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_NoseTop
+    second: {fileID: 2800000, guid: a3d36311b42be7b45bd828319ce14594, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Punani
+    second: {fileID: 2800000, guid: c734ae966b31d434ba4b3439805d112f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Skull
+    second: {fileID: 2800000, guid: 7897043f5c4e6fc408b5f092c8c2f371, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Torso1
+    second: {fileID: 2800000, guid: 76103d86b412b894cbac3d4a1338d36b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Torso2
+    second: {fileID: 2800000, guid: 247a8efa2e9097f49984472f9f1e8827, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Torso3
+    second: {fileID: 2800000, guid: c108fa4e041cb3a40a56c241ee2327f6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Torso4
+    second: {fileID: 2800000, guid: b6d50a90161752148bfb7daded8f5295, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Torso5
+    second: {fileID: 2800000, guid: 2af4809d9faee8c4b887afa9f6c67db4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Woman-Right_Waist
+    second: {fileID: 2800000, guid: 49667c4e51d17054b8d776f574af36e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: test
+    second: {fileID: 2800000, guid: 8846492b7eac7d7469e630c6ab60d548, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: test2
+    second: {fileID: 2800000, guid: a7dac4b31219ea24ebae00525ec61e93, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: texd27efb45
+    second: {fileID: 2800000, guid: 055585e7ac957384587b502d47b1dfc6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tongue
+    second: {fileID: 2800000, guid: df372f0a414ecee4193f2ed9c4fb79ac, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 100
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

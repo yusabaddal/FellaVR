@@ -76,7 +76,11 @@ public class HangerVariantManager : MonoBehaviour {
     {
         for(int i=0;i<this.ListModel.Count;i++)
         {
-           
+            if (this.ListModel[i].variantList.Count == 0)
+            {
+                transform.parent.gameObject.SetActive(false);
+                return;
+            }
             for( int j=0;j < this.ListModel[i].variantList.Count;j++)
             {
                 var modelVariant = this.ListModel[i].variantList[j];
