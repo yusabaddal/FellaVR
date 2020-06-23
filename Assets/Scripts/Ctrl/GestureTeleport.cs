@@ -38,8 +38,26 @@ public class GestureTeleport : MonoBehaviour
             RaycastHit[] hits;
             hits = Physics.RaycastAll(finger.transform.position, finger.transform.right, range);
 
-          
 
+            /*
+            if (hits.Length == 0)
+            {
+                teleporting = false;
+            }
+            else
+            {
+                RaycastHit hit = hits[0];
+
+                if (hit.collider.transform.tag == "Teleport")
+                {
+                    //player.transform.position = hit.collider.transform.position;
+                    teleportingTo = hit.collider.transform;
+                    teleporting = true;
+                }
+            }
+            */
+
+            
             for (int i = 0; i < hits.Length; i++)
             {
                 RaycastHit hit = hits[i];
@@ -55,27 +73,7 @@ public class GestureTeleport : MonoBehaviour
             if (hits.Length == 0)
                 teleporting = false;
 
-            // Check if our raycast has hit anything
-            //if (Physics.Raycast(finger.transform.position, finger.transform.forward, out hit, range))
-            //{
-            //    //Vector3 forward = finger.transform.TransformDirection(Vector3.forward) * range;
-            //    //Debug.DrawRay(finger.transform.position, forward, Color.green);
-
-            //    //laserLine.SetPosition(1, hit.point);
-
-            //    if (hit.collider.transform.tag == "Teleport")
-            //    {
-            //        player.transform.position = hit.collider.transform.position;
-            //        Debug.Log(hit.collider.gameObject.name);
-            //    }
-
-            //    //laserLine.SetPosition(1, rayOrigin + (Camera.main.transform.forward * 100));
-
-            //}
-            //else
-            //{
-            //    Debug.Log("nothing");
-            //}
+           
 
         }
         else

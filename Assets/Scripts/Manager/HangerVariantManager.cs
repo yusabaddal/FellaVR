@@ -91,7 +91,7 @@ public class HangerVariantManager : MonoBehaviour {
                 {
                     if (GameManager.instance.assetsContent.GetChild(a).gameObject.name.ToString() == modelVariant.productCode + "_Aski")
                     {
-                        uımanager.buttonNames.Add(modelVariant.productCode);
+                        uımanager.buttonNames.Add(new buttonModel { buttonName= modelVariant.productCode } );
                         GameObject obj = Instantiate(GameManager.instance.assetsContent.GetChild(a).gameObject, this.transform);
                         obj.transform.localPosition = new Vector3(0, 0, 0);
                         //obj.name = modelVariant.productCode;

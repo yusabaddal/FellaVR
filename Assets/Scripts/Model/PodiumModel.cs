@@ -9,30 +9,34 @@ public class PodiumModel
 [System.Serializable]
 public class podiumGender
 {
-    public int id;
-    public string name;
-    public List<podiumDress> dressList;
+    public int gender_id { get; set; }
+    public string gender_name { get; set; }
+    public string gender_icon { get; set; }
+    public List<GenderDress> gender_dress { get; set; }
 
 }
 [System.Serializable]
-public class podiumDress
+public class TypeSubtype
 {
-    public int id;
-    public string name;
-    public List<podiumType> typeList;
-
+    public int subtype_id { get; set; }
+    public string subtype_name { get; set; }
+    public string subtype_icon { get; set; }
 }
-[System.Serializable]
-public class podiumType
-{
-    public int id;
-    public string name;
-    public List<podiumSubType> subtypeList;
 
-}
 [System.Serializable]
-public class podiumSubType
+public class DressType
 {
-    public int id;
-    public string name;
+    public int type_id { get; set; }
+    public string type_name { get; set; }
+    public string type_icon { get; set; }
+    public List<TypeSubtype> type_subtypes { get; set; }
+}
+
+[System.Serializable]
+public class GenderDress
+{
+    public int dress_id { get; set; }
+    public string dress_name { get; set; }
+    public string dress_icon { get; set; }
+    public List<DressType> dress_types { get; set; }
 }

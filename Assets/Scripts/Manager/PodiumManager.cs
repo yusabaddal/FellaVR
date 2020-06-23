@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
@@ -6,13 +7,15 @@ using UnityEngine.Analytics;
 public class PodiumManager : MonoBehaviour
 {
     public PodiumModel pModel;
-    public HangerUIManager genderUI, dressUI,typeUI,subtypeUI;
+    public HangerUIManager genderUI, dressUI,typeUI,subtypeUI,productsUI;
     public List<GameObject> canvasList;
-    int currentgender, currenttype, currentdress;
+    int currentgender, currenttype, currentdress,currentPage;
+    public List<ColorVaryant> productList;
     // Start is called before the first frame update
     void Start()
     {
-        prepareGenderList();
+        pModel = new PodiumModel();
+        getPodium();
     }
 
     // Update is called once per frame
@@ -48,14 +51,16 @@ public class PodiumManager : MonoBehaviour
 
     void getPodium()
     {
-
+        StartCoroutine(_getPodium());
     }
 
     public void prepareGenderList()
     {
         for (int i = 0; i < pModel.genderList.Count; i++)
         {
-            genderUI.buttonNames.Add(pModel.genderList[i].name);
+            string buttonname = pModel.genderList[i].gender_name;
+            string imgpath= pModel.genderList[i].gender_icon;
+            genderUI.buttonNames.Add(new buttonModel {buttonName=buttonname,buttonImagePath=imgpath });
         }
         genderUI.setUI();
     }
@@ -63,9 +68,12 @@ public class PodiumManager : MonoBehaviour
     {
         currentgender = gender;
         openPage(1);
-        for (int i = 0; i < pModel.genderList[gender].dressList.Count; i++)
+        for (int i = 0; i < pModel.genderList[gender].gender_dress.Count; i++)
         {
-            dressUI.buttonNames.Add(pModel.genderList[gender].dressList[i].name);
+            string buttonname = pModel.genderList[gender].gender_dress[i].dress_name;
+            string imgpath = pModel.genderList[gender].gender_dress[i].dress_icon;
+
+            dressUI.buttonNames.Add(new buttonModel { buttonName = buttonname, buttonImagePath = imgpath });
         }
         dressUI.setUI();
 
@@ -74,9 +82,12 @@ public class PodiumManager : MonoBehaviour
     {
         currentdress = dress;
         openPage(2);
-        for (int i = 0; i < pModel.genderList[currentgender].dressList[currentdress].typeList.Count; i++)
+        for (int i = 0; i < pModel.genderList[currentgender].gender_dress[currentdress].dress_types.Count; i++)
         {
-            typeUI.buttonNames.Add(pModel.genderList[currentgender].dressList[currentdress].typeList[i].name);
+            string buttonname = pModel.genderList[currentgender].gender_dress[currentdress].dress_types[i].type_name;
+            string imgpath = pModel.genderList[currentgender].gender_dress[currentdress].dress_types[i].type_icon;
+
+            typeUI.buttonNames.Add(new buttonModel { buttonName = buttonname, buttonImagePath = imgpath });
         }
         typeUI.setUI();
 
@@ -85,12 +96,40 @@ public class PodiumManager : MonoBehaviour
     {
         currenttype = type;
         openPage(3);
-        for (int i = 0; i < pModel.genderList[currentgender].dressList[currentdress].typeList[currenttype].subtypeList.Count; i++)
+        for (int i = 0; i < pModel.genderList[currentgender].gender_dress[currentdress].dress_types[currenttype].type_subtypes.Count; i++)
         {
-            subtypeUI.buttonNames.Add(pModel.genderList[currentgender].dressList[currentdress].typeList[currenttype].subtypeList[i].name);
+            string buttonname = pModel.genderList[currentgender].gender_dress[currentdress].dress_types[currenttype].type_subtypes[i].subtype_name;
+            string imgpath = pModel.genderList[currentgender].gender_dress[currentdress].dress_types[currenttype].type_subtypes[i].subtype_icon;
+
+            subtypeUI.buttonNames.Add(new buttonModel { buttonName = buttonname, buttonImagePath = imgpath });
         }
         subtypeUI.setUI();
 
+    }
+
+    public void prepareProducts(int subtype)
+    {
+        int selectedSubtypeID = pModel.genderList[currentgender].gender_dress[currentdress].dress_types[currenttype].type_subtypes[subtype].subtype_id;
+        //int selectedSubtypeID = 15;
+        productList = new List<ColorVaryant>();
+        openPage(4);
+
+        foreach(var prod in GameManager.instance.productList)
+        {
+            if (prod.varyant_subtype_id == selectedSubtypeID)
+            {
+                productList.Add(prod);
+            }
+        }
+
+        for (int i = 0; i < productList.Count; i++)
+        {
+            string buttonname = productList[i].varyant_stock_code;
+            string imgpath = "";
+
+            productsUI.buttonNames.Add(new buttonModel { buttonName = buttonname, buttonImagePath = imgpath });
+        }
+        productsUI.setUI();
     }
 
 
@@ -104,6 +143,37 @@ public class PodiumManager : MonoBehaviour
     public void openPage(int page)
     {
         closeAllPages();
+        currentPage = page;
         canvasList[page].SetActive(true);
+    }
+    public void backPage()
+    {
+        if(currentPage>0)
+        openPage(currentPage - 1);
+    }
+
+    IEnumerator _getPodium()
+    {
+        PostCtrl post = new PostCtrl();
+        //error.text = "Giriş Yapılıyor";
+
+        yield return StartCoroutine(post.gettData(EndPoint.getpodium,""));
+
+        if (post.resultObj.responseCode != 200)  //on server fail
+        {
+            //error.text = post.resultObj.error;
+
+        }
+        else //on server success
+        {
+            string resultStr = post.resultObj.downloadHandler.text;
+
+            var res = JsonConvert.DeserializeObject<List<podiumGender>>(resultStr);          
+            if (res != null)
+            {
+                pModel.genderList = res;
+                prepareGenderList();
+            }
+        }
     }
 }

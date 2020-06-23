@@ -7,7 +7,8 @@ public enum EndPoint
 {
    login,
    getscene,
-   getUserScenes
+   getUserScenes,
+   getpodium
     
 }
 
@@ -18,6 +19,7 @@ public class PostCtrl
     string LoginEndpoint = "/Users_Login";
     string GetSceneEndpoint = "/DownloadGame/";
     string GetUserScenesEndpoint = "/Scenarios_GetListForGame/";
+    string GetPodiumEndpoint = "/AllTypes";
 
 
     public UnityWebRequest resultObj;
@@ -27,6 +29,7 @@ public class PostCtrl
 			case EndPoint.login: return server + LoginEndpoint;
             case EndPoint.getscene: return server + GetSceneEndpoint;
             case EndPoint.getUserScenes: return server + GetUserScenesEndpoint;
+            case EndPoint.getpodium: return server + GetPodiumEndpoint;
 
 
             default:

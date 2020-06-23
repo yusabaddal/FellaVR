@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject assetPrefab;
     public Transform assetsContent;
     private int totalAssetCount,downloadedAssetCount;
+    public List<ColorVaryant> productList;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,6 +23,9 @@ public class GameManager : MonoBehaviour
 
         getScene();
         resp = new List<ScenarioTree>();
+        if (productList == null)
+            productList = new List<ColorVaryant>();
+
         //fillHangers();
     }
 
@@ -57,7 +61,7 @@ public class GameManager : MonoBehaviour
                         totalAssetCount++;
                         obj.name = respHanger.product_name;
                         AssetManager assetman = obj.transform.GetComponent<AssetManager>();
-
+                        productList.Add(colorvariant.color_varyant[v]);
                         if (assetman == null)
                         {
                             assetman = obj.AddComponent<AssetManager>();
@@ -113,7 +117,9 @@ public class GameManager : MonoBehaviour
 
     void getScene()
     {
-        StartCoroutine(_getscene("20"));
+        int sceneID = PlayerPrefs.GetInt("GameID");
+        Debug.Log(sceneID + " loading");
+        StartCoroutine(_getscene(sceneID.ToString()));
     }
 
     IEnumerator _getscene(string id)
@@ -133,10 +139,13 @@ public class GameManager : MonoBehaviour
             string resultStr = post.resultObj.downloadHandler.text;
 
            var res= JsonConvert.DeserializeObject<List<Response>>(resultStr);
+            if(res!=null && res.Count>0)
+            {
             resp = res[0].scenario_trees;
             if (resp != null)
             {
                 fillHangers();
+            }
             }
         }
 
