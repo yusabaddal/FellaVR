@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 [System.Serializable]
 public class HangerVariant
 {
+    public int productID;
     public string productCode;
     public string productName;
     public Sprite productImage;
     public GameObject productModel;
     public GameObject avatarModel;
-
+    public bool isFavourite;
 }
 [System.Serializable]
 public class VariantColor
 {
-    public string ColorName;
+    public string color_name;
+    public string color_code;
+
     public List<HangerVariant> variantList;
 }
 
@@ -23,13 +27,17 @@ public class HangerVariantManager : MonoBehaviour {
     
     int currentSelected;
     int currentColor;
+    public GameObject favourited;
     public HangerUIManager uımanager;
+
+    public Transform colorContent;
 
     [Header("-------------------------------***************-------------------------------")]
 
     [Header("Variant Settings")]
     public List<VariantColor> ListModel;
    
+    
     // Use this for initialization
     void Start () {
 		
@@ -48,6 +56,11 @@ public class HangerVariantManager : MonoBehaviour {
         }
     }
 
+    public void showSelectedColor(int selected)
+    {
+        currentColor = selected;
+        fillVariant();
+    }
     void closeAllObjects()
     {
         foreach (var obj in ListModel[currentColor].variantList)
@@ -74,19 +87,17 @@ public class HangerVariantManager : MonoBehaviour {
 
     public void fillVariant()
     {
-        for(int i=0;i<this.ListModel.Count;i++)
-        {
-            if (this.ListModel[i].variantList.Count == 0)
+        //for(int i=0;i<this.ListModel.Count;i++)
+        //{
+            //if (this.ListModel[i].variantList.Count == 0)
+            //{
+            //    transform.parent.gameObject.SetActive(false);
+            //    return;
+            //}
+            for( int j=0;j < this.ListModel[currentColor].variantList.Count;j++)
             {
-                transform.parent.gameObject.SetActive(false);
-                return;
-            }
-            for( int j=0;j < this.ListModel[i].variantList.Count;j++)
-            {
-                var modelVariant = this.ListModel[i].variantList[j];
-                //modelVariant.productModel = Instantiate(modelVariant.productModel, this.transform);
-                //Debug.Log(transform.parent.gameObject.name);
-                //var findObj = GameObject.Find(modelVariant.productCode+"_Aski");
+                var modelVariant = this.ListModel[currentColor].variantList[j];
+                
                 for(int a = 0; a < GameManager.instance.assetsContent.childCount; a++)
                 {
                     if (GameManager.instance.assetsContent.GetChild(a).gameObject.name.ToString() == modelVariant.productCode + "_Aski")
@@ -94,7 +105,6 @@ public class HangerVariantManager : MonoBehaviour {
                         uımanager.buttonNames.Add(new buttonModel { buttonName= modelVariant.productCode } );
                         GameObject obj = Instantiate(GameManager.instance.assetsContent.GetChild(a).gameObject, this.transform);
                         obj.transform.localPosition = new Vector3(0, 0, 0);
-                        //obj.name = modelVariant.productCode;
                         var selfVariant = obj.transform.GetComponent<VariantManager>();
                         if (selfVariant == null)
                         {
@@ -103,12 +113,12 @@ public class HangerVariantManager : MonoBehaviour {
                         selfVariant.selfVariant = new HangerVariant {
                             productCode=modelVariant.productCode,
                             productName=modelVariant.productName,
-                            productModel=obj                            
+                            productModel=obj,
+                            productID=modelVariant.productID
                         };
                         var col =obj.AddComponent<BoxCollider>();
                         col.isTrigger = true;
                         col.center = new Vector3(0, 5, 0);
-                       //modelVariant.productModel = obj;
                         Debug.Log(modelVariant.productCode);
                         modelVariant.productModel = obj;
                         if (a > 0)
@@ -117,14 +127,44 @@ public class HangerVariantManager : MonoBehaviour {
                         }
                     }
                 }
-                //if (findObj != null)
-                //{
-                    
-                //}
+              
             }
-        }
+        //}
         showSelectedModel(0);
         uımanager.setUI();
+        Color color;
+        ColorUtility.TryParseHtmlString("#" + ListModel[currentColor].color_code, out color);
+        //System.Windows.Media.Color color = (System.Windows.Media.Color)ColorConverter.ConvertFromString("#"+ListModel[currentColor].ColorName);
+        //uımanager.setColor(new UnityEngine.Color(color.R,color.G,color.B));
+        uımanager.setColor(color);
+
+    }
+
+    public void fillColor()
+    {
+        for(int i = 0; i < ListModel.Count; i++)
+        {
+            colorContent.GetChild(i).gameObject.SetActive(true);
+            colorContent.GetChild(i).GetComponentInChildren<Text>().text = ListModel[i].color_name;
+            Color color;
+            ColorUtility.TryParseHtmlString("#" + ListModel[i].color_code, out color);
+            var colormat = colorContent.GetChild(i).GetChild(0).GetComponent<MeshRenderer>();
+            for (int c = 0; c < colormat.materials.Length; c++)
+            {
+                colormat.materials[c] = new Material(Shader.Find("Specular"));
+                colormat.materials[c].color = color;
+            }
+        }
+        fillVariant();
+    }
+
+    public void setFavourite(bool state)
+    {
+        ListModel[currentColor].variantList[currentSelected].isFavourite=state;
+    }
+    public void getFavourite()
+    {
+        favourited.SetActive(ListModel[currentColor].variantList[currentSelected].isFavourite);
     }
 
 }

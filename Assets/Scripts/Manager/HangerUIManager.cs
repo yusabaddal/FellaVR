@@ -59,6 +59,10 @@ public class HangerUIManager : MonoBehaviour
         }
     }
 
+    public void setColor(Color color)
+    {
+
+    }
     void closeAll()
     {
         foreach(var cont in buttonContents)

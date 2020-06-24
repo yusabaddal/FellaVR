@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
             {
                 foreach(var hanger in hangerManager.HangerList)
                 {
-                    hanger.fillVariant();
+                    hanger.fillColor();
                 }
             }
         }

@@ -127,14 +127,15 @@ public class AssetManager : MonoBehaviour
         {
             if (hanger.location == hangerLocation)
             {
-               if(hanger.HangerList[hangerPos].ListModel.Count>=0)
+               if(hanger.HangerList[hangerPos].ListModel.Count>0)
                 {
                     var currenthanger = hanger.HangerList[hangerPos].ListModel[0].variantList;
                   if ( currenthanger != null)
                     {
                         currenthanger.Add(new HangerVariant {
                             productCode = this.selfVariant.varyant_name,
-                            productName = this.selfVariant.varyant_name
+                            productName = this.selfVariant.varyant_name,
+                            productID=this.selfVariant.varyant_id
                         });
                         Debug.Log("Founded Hanger");
 
