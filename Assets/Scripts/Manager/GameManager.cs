@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Transform assetsContent;
     private int totalAssetCount,downloadedAssetCount;
     public List<ColorVaryant> productList;
+    public PodiumManken pManken;
+
     // Start is called before the first frame update
     private void Awake()
     {

@@ -66,4 +66,6 @@ public class HangerUIManager : MonoBehaviour
             cont.gameObject.SetActive(false);
         }
     }
+
+    
 }

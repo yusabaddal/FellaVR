@@ -18,7 +18,9 @@ public class ChangeMesh : MonoBehaviour
     //If the main body mesh is missing any bones, try giving them weights or keyframes and export again.
     public Transform[] boneArray;
 
-    private void Start()
+    public bool isUpper;
+
+    private void Awake()
     {
         if (rootBone == null)
         {
@@ -29,27 +31,32 @@ public class ChangeMesh : MonoBehaviour
             }
         }
     }
-    void Update()
-    {
+   
+    //void Update()
+    //{
 
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (target != null)
-            {
-                AssignToActor();
-            }
-        }
-    }
+    //    if (Input.GetKey(KeyCode.Space))
+    //    {
+    //        if (target != null)
+    //        {
+    //            AssignToActor();
+    //        }
+    //        else
+    //        {
+    //            findTarget(isUpper);
+    //        }
+    //    }
+    //}
 
 
-    void AssignToActor()
+    public void AssignToActor()
     {
         if (target == null)
         {
-            findTarget();
+            findTarget(isUpper);
         }
-        //parent object to actor just in case, and move it there (although the bone movement technically takes care of it)
+        
         transform.parent = target.transform;
         transform.localPosition = Vector3.zero;
 
@@ -82,8 +89,16 @@ public class ChangeMesh : MonoBehaviour
         transform.GetComponent<SkinnedMeshRenderer>().enabled = true;
     }
 
-    void findTarget()
+    void findTarget(bool isUpper)
     {
-
+        if (isUpper)
+        {
+            target = GameManager.instance.pManken.upperTarget;
+        }
+        else
+        {
+            target = GameManager.instance.pManken.bottomTarget;
+        }
     }
+
 }

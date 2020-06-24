@@ -45,6 +45,24 @@ public class CubeButton : MonoBehaviour
         
     }
 
-   
+    public void callProduct()
+    {
+        for (int a = 0; a < GameManager.instance.assetsContent.childCount; a++)
+        {
+            if (GameManager.instance.assetsContent.GetChild(a).gameObject.name.ToString() == buttonString + "_Avatar")
+            {
+                var avatarObj = Instantiate(GameManager.instance.assetsContent.GetChild(a).gameObject, transform);
+                avatarObj.transform.SetParent(GameManager.instance.pManken.transform.parent);
+                avatarObj.transform.localPosition = Vector3.zero;
+                var change= avatarObj.transform.GetComponentInChildren<ChangeMesh>();
+                if(change!=null)
+                change.AssignToActor();
+
+            }
+
+        }
+
+    }
+
 
 }
