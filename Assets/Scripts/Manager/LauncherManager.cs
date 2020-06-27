@@ -7,6 +7,8 @@ using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Oculus.Platform;
+
 public class LauncherManager : MonoBehaviour {
     public List<GameObject> pages;
     public InputField mailInput, pwInput;
@@ -96,7 +98,7 @@ public class LauncherManager : MonoBehaviour {
     {
         Debug.LogWarning("ASYNC LOAD STARTED - " +
            "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
-        async = Application.LoadLevelAsync(levelName);
+        async = UnityEngine.Application.LoadLevelAsync(levelName);
         async.allowSceneActivation = false;
         yield return async;
         loadingGame = false;
@@ -132,7 +134,7 @@ public class LauncherManager : MonoBehaviour {
 
     public void OpenScene(int scene)
     {
-        Application.LoadLevel(scene);
+        UnityEngine.Application.LoadLevel(scene);
         //async.allowSceneActivation = true;
 
     }
@@ -178,6 +180,7 @@ public class LauncherManager : MonoBehaviour {
             if (resp.Count > 0)
             {
                 user = resp[0];
+                PlayerPrefs.SetInt("UserID", user.user_id);
                 setUserName();
                 StartCoroutine(getUserScenes(user.user_id.ToString()));
                 OpenPage(1);

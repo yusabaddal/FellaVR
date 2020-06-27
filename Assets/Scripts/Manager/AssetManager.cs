@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class AssetManager : MonoBehaviour
 
     public ColorVaryant selfVariant;
     public int hangerLocation,hangerPos;
+    public int selfColor;
     public GameObject selfObject, selfAvatar;
     // Start is called before the first frame update
     void Start()
@@ -129,17 +131,25 @@ public class AssetManager : MonoBehaviour
             {
                if(hanger.HangerList[hangerPos].ListModel.Count>0)
                 {
-                    var currenthanger = hanger.HangerList[hangerPos].ListModel[0].variantList;
-                  if ( currenthanger != null)
+                    try
                     {
-                        currenthanger.Add(new HangerVariant {
-                            productCode = this.selfVariant.varyant_name,
-                            productName = this.selfVariant.varyant_name,
-                            productID=this.selfVariant.varyant_id
-                        });
-                        Debug.Log("Founded Hanger");
+                        var currenthanger = hanger.HangerList[hangerPos].ListModel[selfColor].variantList;
+                        if (currenthanger != null)
+                        {
+                            currenthanger.Add(new HangerVariant
+                            {
+                                productCode = this.selfVariant.varyant_name,
+                                productName = this.selfVariant.varyant_name,
+                                productID = this.selfVariant.varyant_id
+                            });
+                            Debug.Log("Founded Hanger");
 
+                        }
                     }
+                    catch(Exception e) {
+                        Debug.Log(this.selfVariant.varyant_name);
+                    }
+                    
                 }
                 
             }

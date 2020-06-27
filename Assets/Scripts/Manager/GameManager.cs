@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Leap;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +16,11 @@ public class GameManager : MonoBehaviour
     private int totalAssetCount,downloadedAssetCount;
     public List<ColorVaryant> productList;
     public PodiumManken pManken;
+    public List<Transform> hands;
 
+    public Shader shader;
+    public GameObject  LoadingObject;
+    public UnityEngine.UI.Image loadingIMG;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -51,11 +57,16 @@ public class GameManager : MonoBehaviour
             for(int j=0;j< respHangermanager.tree_products.Count; j++)
             {
                 TreeProduct respHanger = respHangermanager.tree_products[j];
-               
 
+                hangerManagers[respHangermanager.tree_location].HangerList[j].ListModel = new List<VariantColor>();
                 for (int c = 0; c < respHanger.product_colors.Count; c++)
                 {
                     var colorvariant = respHanger.product_colors[c];
+                    hangerManagers[respHangermanager.tree_location].HangerList[j].ListModel.Add(new VariantColor { 
+                    color_code=colorvariant.color_code,
+                    color_name=colorvariant.color_name,
+                    variantList=new List<HangerVariant>()                    
+                    });
 
                     for(int v = 0; v < colorvariant.color_varyant.Count; v++)
                     {
@@ -88,6 +99,7 @@ public class GameManager : MonoBehaviour
                         };
                         assetman.hangerLocation = respHangermanager.tree_location;
                         assetman.hangerPos = j;
+                        assetman.selfColor = c;
                         assetman.prepareModel();
                     }
 
@@ -98,9 +110,12 @@ public class GameManager : MonoBehaviour
 
     void checkAllAsset()
     {
+        loadingIMG.fillAmount = (float)downloadedAssetCount / (float)totalAssetCount;
         if (downloadedAssetCount == totalAssetCount)
         {
             //finish
+            //LeapObject.SetActive(true);
+            LoadingObject.SetActive(false);
             foreach(var hangerManager in hangerManagers)
             {
                 foreach(var hanger in hangerManager.HangerList)
@@ -152,6 +167,19 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    public void setHandCollider(Transform handcollider,bool isleft)
+    {
+        if (isleft)
+        {
+            handcollider.SetParent(hands[0]);
+        }
+        else
+        {
+            handcollider.SetParent(hands[1]);
+        }
+        handcollider.position = Vector3.zero;
     }
 }
 

@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Launcher.unity
     guid: e73271ba964e1d446b8e4de530ee8a73
   - enabled: 1
-    path: Assets/Scenes/NewScene.unity
+    path: Assets/Scenes/LeapMotionScene.unity
     guid: 6b4e97226316dc3499b7ac5a8b5e59c7
   m_configObjects: {}

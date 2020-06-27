@@ -61,7 +61,16 @@ public class HangerUIManager : MonoBehaviour
 
     public void setColor(Color color)
     {
-
+        for(int i = 0; i < buttonContents.Count; i++)
+        {
+        var colormat = buttonContents[i].GetChild(0).GetChild(0).GetComponent<MeshRenderer>();
+        for (int c = 0; c < colormat.materials.Length; c++)
+        {
+            colormat.materials[c] = new Material(GameManager.instance.shader);
+            colormat.materials[c].SetColor("_EmissionColor", color);
+                //colormat.materials[c].color = color;
+        }
+        }
     }
     void closeAll()
     {

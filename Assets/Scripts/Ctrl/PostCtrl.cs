@@ -8,7 +8,9 @@ public enum EndPoint
    login,
    getscene,
    getUserScenes,
-   getpodium
+   getpodium,
+   addFav,
+   deleteFav
     
 }
 
@@ -20,6 +22,9 @@ public class PostCtrl
     string GetSceneEndpoint = "/DownloadGame/";
     string GetUserScenesEndpoint = "/Scenarios_GetListForGame/";
     string GetPodiumEndpoint = "/AllTypes";
+    string AddFavEndpoint = "/Varyants_AddFavorite";
+    string DeleteFavEndpoint = "/Varyants_DeleteFavorite";
+
 
 
     public UnityWebRequest resultObj;
@@ -30,14 +35,13 @@ public class PostCtrl
             case EndPoint.getscene: return server + GetSceneEndpoint;
             case EndPoint.getUserScenes: return server + GetUserScenesEndpoint;
             case EndPoint.getpodium: return server + GetPodiumEndpoint;
-
-
+            case EndPoint.addFav: return server + AddFavEndpoint;
+            case EndPoint.deleteFav: return server + DeleteFavEndpoint;
             default:
 				return "";
 		}
 	}
        
-
 	public IEnumerator postData(EndPoint endPointType, string jsonData){
 
 		string url = GetEndPointURL(endPointType);
@@ -67,7 +71,6 @@ public class PostCtrl
     {
 
         string url = GetEndPointURL(endPointType)+jsonData;
-
         
         UnityWebRequest request = new UnityWebRequest(url, "GET");
         //request.SetRequestHeader("Authorization", "Bearer " + PlayerPrefs.GetString("Token"));
