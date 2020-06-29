@@ -15,8 +15,8 @@ namespace Valve.VR.InteractionSystem.Sample
     {
         private TextMesh generalText;
         private TextMesh hoveringText;
-        private Vector3 oldPosition;
-		private Quaternion oldRotation;
+        private Vector3 oldPosition,firstPosition;
+		private Quaternion oldRotation,firstRotation;
 
 		private float attachTime;
 
@@ -24,9 +24,13 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private Interactable interactable;
 
+		public GameObject UICanvas;
+		bool isOut,isgrabbed;
 		//-------------------------------------------------
 		void Awake()
 		{
+			firstPosition = transform.position;
+			firstRotation = transform.rotation;
 			var textMeshs = GetComponentsInChildren<TextMesh>();
             generalText = textMeshs[0];
             hoveringText = textMeshs[1];
@@ -44,6 +48,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		private void OnHandHoverBegin( Hand hand )
 		{
 			generalText.text = "Hovering hand: " + hand.name;
+		
 		}
 
 
@@ -53,6 +58,8 @@ namespace Valve.VR.InteractionSystem.Sample
 		private void OnHandHoverEnd( Hand hand )
 		{
 			generalText.text = "No Hand Hovering";
+			//if (!isOut && UICanvas != null)
+			//	UICanvas.SetActive(false);
 		}
 
 
@@ -63,7 +70,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		{
             GrabTypes startingGrabType = hand.GetGrabStarting();
             bool isGrabEnding = hand.IsGrabEnding(this.gameObject);
-
+			isgrabbed = !isGrabEnding;
             if (interactable.attachedToHand == null && startingGrabType != GrabTypes.None)
             {
                 // Save our position/rotation so that we can restore it when we detach
@@ -86,8 +93,8 @@ namespace Valve.VR.InteractionSystem.Sample
                 hand.HoverUnlock(interactable);
 
                 // Restore position/rotation
-                transform.position = oldPosition;
-                transform.rotation = oldRotation;
+               
+            
             }
 		}
 
@@ -99,9 +106,16 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             generalText.text = string.Format("Attached: {0}", hand.name);
             attachTime = Time.time;
+			if (UICanvas != null)
+				UICanvas.SetActive(true);
 		}
 
-
+		void setToHanger()
+        {
+			transform.position = firstPosition;
+			transform.rotation = firstRotation;
+			UICanvas.SetActive(false);
+		}
 
 		//-------------------------------------------------
 		// Called when this GameObject is detached from the hand
@@ -109,6 +123,10 @@ namespace Valve.VR.InteractionSystem.Sample
 		private void OnDetachedFromHand( Hand hand )
 		{
             generalText.text = string.Format("Detached: {0}", hand.name);
+			if (!isOut)
+			{
+				setToHanger();
+			}
 		}
 
 
@@ -144,6 +162,29 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnHandFocusLost( Hand hand )
 		{
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+			if (isOut && other.transform.tag == "Dress")
+			{
+				Debug.Log("İtem girdi");
+				isOut = false;
+                if (!isgrabbed)
+                {
+					setToHanger();
+                }
+			}
+			
+
+		}
+		private void OnTriggerExit(Collider other)
+		{
+			if (!isOut)
+			{
+				Debug.Log("İtem çıktı");
+				isOut = true;
+			}
 		}
 	}
 }

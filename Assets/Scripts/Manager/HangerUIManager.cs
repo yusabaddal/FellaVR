@@ -67,6 +67,7 @@ public class HangerUIManager : MonoBehaviour
         for (int c = 0; c < colormat.materials.Length; c++)
         {
             colormat.materials[c] = new Material(GameManager.instance.shader);
+            colormat.materials[c].color = color;
             colormat.materials[c].SetColor("_EmissionColor", color);
                 //colormat.materials[c].color = color;
         }

@@ -150,7 +150,17 @@ public class HangerVariantManager : MonoBehaviour {
             {
                 if (GameManager.instance.assetsContent.GetChild(a).gameObject.name.ToString() == modelVariant.productCode + "_Aski")
                 {
-                    uımanager.buttonNames.Add(new buttonModel { buttonName = modelVariant.productCode });
+                    bool isfound=false;
+                    foreach(var names in uımanager.buttonNames)
+                    {
+                        if (names.buttonName == modelVariant.productCode)
+                        {
+                            isfound = true;
+                        }
+                    }
+
+                    if(!isfound)
+                        uımanager.buttonNames.Add(new buttonModel { buttonName = modelVariant.productCode });
                 }
             }
 
@@ -173,11 +183,11 @@ public class HangerVariantManager : MonoBehaviour {
             colorContent.GetChild(i).GetComponentInChildren<Text>().text = ListModel[i].color_name;
             Color color;
             ColorUtility.TryParseHtmlString("#" + ListModel[i].color_code, out color);
-            var colormat = colorContent.GetChild(i).GetChild(0).GetComponent<MeshRenderer>();
+            var colormat = colorContent.GetChild(i).GetChild(0).GetChild(0).GetComponent<MeshRenderer>();
             for (int c = 0; c < colormat.materials.Length; c++)
             {
                 colormat.materials[c] = new Material(GameManager.instance.shader);
-                //colormat.materials[c].color = color;
+                colormat.materials[c].color = color;
                 colormat.materials[c].SetColor("_EmissionColor", color);
 
             }
@@ -205,8 +215,8 @@ public class HangerVariantManager : MonoBehaviour {
     public void getFavourite()
     {
         bool isfavorite = ListModel[currentColor].variantList[currentSelected].isFavourite;
-        favouriteBut.SetActive(isfavorite);
-        unfavoriteBut.SetActive(!isfavorite);
+        favouriteBut.SetActive(!isfavorite);
+        unfavoriteBut.SetActive(isfavorite);
     }
 
     public IEnumerator addFav(FavoritePostModel data)

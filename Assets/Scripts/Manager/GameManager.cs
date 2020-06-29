@@ -1,5 +1,6 @@
 ﻿using Leap;
 using Newtonsoft.Json;
+using Oculus.Platform.Samples.VrHoops;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,13 +14,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject assetPrefab;
     public Transform assetsContent;
-    private int totalAssetCount,downloadedAssetCount;
+    public int totalAssetCount,downloadedAssetCount;
     public List<ColorVaryant> productList;
     public PodiumManken pManken;
     public List<Transform> hands;
 
     public Shader shader;
-    public GameObject  LoadingObject;
+    public GameObject  LoadingObject,PlayerObj;
     public UnityEngine.UI.Image loadingIMG;
     // Start is called before the first frame update
     private void Awake()
@@ -116,6 +117,10 @@ public class GameManager : MonoBehaviour
             //finish
             //LeapObject.SetActive(true);
             LoadingObject.SetActive(false);
+            if(PlayerObj!=null)
+            {
+                PlayerObj.SetActive(true);
+            }
             foreach(var hangerManager in hangerManagers)
             {
                 foreach(var hanger in hangerManager.HangerList)
